@@ -6,6 +6,8 @@ import NavBar from './Components/Navigation/Navbar'
 import MyResume from './Components/ResumeDisplay/MyResume';
 import AboutUs from './Components/AboutUs/AboutUs';
 import './App.css';
+import Templates from './Components/HomePage/templates';
+import Contact from './Components/contactus/Contact';
 
 // This component defines routing for other components 
 // Home page displays the different templates from which user can select either of them.
@@ -22,9 +24,11 @@ function App() {
         <div>
             <Routes>
                   <Route exact path="/" element={<Home/>}></Route>
+                  <Route exact path="/Home" element={<Templates/>}></Route>
                   <Route path="/detailsfillingpage/*" element ={<DetailsFillingPage />}></Route> 
                   <Route path="/myresume" element={<MyResume/>}></Route>
                   <Route exact path="/about" element={<AboutUs/>}></Route>
+                  <Route exact path="/contact" element={<Contact/>}></Route>
                   <Route path="*" element={<Navigate to="/about" />}></Route>
             </Routes> 
         </div>

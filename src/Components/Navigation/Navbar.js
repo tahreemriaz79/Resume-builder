@@ -1,5 +1,4 @@
 import React from 'react'
-import {FileEarmarkTextFill} from 'react-bootstrap-icons'
 import {Link} from 'react-router-dom'
 
 function NavBar(){
@@ -9,8 +8,10 @@ function NavBar(){
             <nav className="navbar navbar-expand-lg navbar-light p-0 m-0 " >
                 <div className="container-fluid  ">
                   <div className="navbar-brand d-flex align-items-center" style={{color:'#07588a',fontSize:'30px', fontWeight:"600"}}>
-                    <div className='me-3 mb-2'><FileEarmarkTextFill/></div>
-                    <div>Portfolio Creator</div>
+                    <div className='logo'>
+                    <img src="../images/logo2.png" alt=""/>
+                    </div>
+                    <div></div>
                   </div>
                   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -20,16 +21,25 @@ function NavBar(){
                     <div className="navbar-nav mb-2 ms-5 ">
                       <li className="nav-item">
                       {/* /*this link will show the Home page */}
-                        <Link to='/' className="nav-link active me-4" style={{textDecoration:'none',color:'#07588a',fontSize:"20px"}}>Resume Templates</Link> 
+                        <Link to='/' className="nav-link active me-4" style={{textDecoration:'none',color:'#07588a',fontSize:"20px",fontWeight: '600' }}>Home</Link> 
                       </li>
                       <li className="nav-item">
+                      {/* this link will show the MyResume page displaying the preview of the resume created by the user. */}
+                         <Link to='/Home' className="nav-link active me-4" style={{ textDecoration: 'none', fontSize: "20px", fontWeight: '600' }}>Templates</Link>
+                         </li>
+                      <li className="nav-item">
                         {/* this link will show the MyResume page displaying the preview of the resume created by the user. */}
-                        <Link to='/myresume' className="nav-link active me-4" style={{textDecoration:'none',color:'#07588a',fontSize:"20px"}} >My Resume</Link>
+                        <Link to='/myresume' className="nav-link active me-4" style={{textDecoration:'none',color:'#07588a',fontSize:"20px",fontWeight: '600' }} >My Resume</Link>
                       </li>
                       <li className="nav-item">
                         {/* this link will show the About Us page. */}
-                        
+                        <Link to='/about' className="nav-link active me-4" style={{ textDecoration: 'none', fontSize: "20px", fontWeight: '600'  }} >About</Link>
                       </li>
+                      <li className="nav-item">
+                         {/* this link will show the About Us page. */}
+                         <Link to='/contact' className="nav-link active me-4" style={{ textDecoration: 'none', fontSize: "20px", fontWeight: '600' }} >Contact</Link>
+
+                        </li>
                     </div>
                   </div>
                 </div>
